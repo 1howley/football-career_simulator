@@ -17,3 +17,11 @@ fetch(`https://v3.football.api-sports.io/fixtures?league=${id}&season=${2023}&da
     console.log(result);
   })
   .catch(error => console.log('error', error));
+
+
+function setTeamSeleted() {
+  let divTeamSelected = document.getElementById('teamSeleted');
+  for(let x = 0; x < 10; x++) {
+    divTeamSelected.innerHTML = `188`;
+  }
+}
