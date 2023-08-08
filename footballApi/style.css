@@ -15,17 +15,26 @@
 body {
     background-color: var(--back-color);
 }
-.gameView {
-    height: 95vh;
+
+.container {
+    height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-
-/* team selected */
+.left-content, .mid-content, .right-content{
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .teamSelected {
-    margin-top: 2rem;
-    margin-left: 8rem;
+    margin: 1rem;
     display: flex;
     flex-wrap: wrap;
     width: 25vw;
@@ -39,7 +48,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 2rem 1rem 2rem;
+    margin-right: 1rem;
 }
 .team {
     height: 2.5rem;
@@ -48,8 +57,13 @@ body {
     border-radius: 24px;
 }
 
-/* team chooser */
+.stats{
+    margin: 1rem;
+}
 
-.teamChooser {
-    margin-left: 30vw;
+.team-chooser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
 }
