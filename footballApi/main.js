@@ -20,8 +20,10 @@ fetch(`https://v3.football.api-sports.io/fixtures?league=${id}&season=${2023}&da
 
 
 function setTeamSeleted() {
-  let divTeamSelected = document.getElementById('teamSeleted');
-  for(let x = 0; x < 10; x++) {
-    divTeamSelected.innerHTML = `188`;
+  let age = 18;
+  let teamSelected = document.getElementById("teamSelected")
+  for(let x = 0; x < 9; x++) {
+    age += 2;
+    teamSelected.innerHTML += `<div class="ageCircle">${age}</div><div class="team"></div>`;
   }
 }
