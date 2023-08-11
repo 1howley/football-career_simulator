@@ -30,8 +30,8 @@ function cleanInput() {
 }
 
 function start() {
-  let info = document.getElementById("info").readOnly = true;
-  let infoName = document.getElementById("infoName").readOnly = true;
+  document.getElementById("info").readOnly = true;
+  document.getElementById("infoName").readOnly = true;
   document.getElementById("info").style.cursor = "no-drop";
   document.getElementById("infoName").style.cursor = "no-drop";
 }
