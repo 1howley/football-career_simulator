@@ -1,3 +1,4 @@
+var cleaned = false;
 const id = 1062;
 const today = new Date().toISOString().split('T')[0];
 
@@ -11,19 +12,26 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch(`https://v3.football.api-sports.io/fixtures?league=${id}&season=${2023}&date=${today}`, requestOptions)
+function randomTeam(){
+  fetch(`https://v3.football.api-sports.io/fixtures?league=${id}&season=${2023}&date=${today}`, requestOptions)
   .then(response => response.json())
   .then(result => {
     console.log(result);
   })
   .catch(error => console.log('error', error));
+}
 
-
-function setTeamSeleted() {
-  let age = 18;
-  let teamSelected = document.getElementById("teamSelected")
-  for(let x = 0; x < 9; x++) {
-    age += 2;
-    teamSelected.innerHTML += `<div class="ageCircle">${age}</div><div class="team"></div>`;
+function cleanInput() {
+  if (cleaned == false) {
+    cleaned = true;
+    document.getElementById("info").value = "";
+    document.getElementById("infoName").value = "";
   }
+}
+
+function start() {
+  let info = document.getElementById("info").readOnly = true;
+  let infoName = document.getElementById("infoName").readOnly = true;
+  document.getElementById("info").style.cursor = "no-drop";
+  document.getElementById("infoName").style.cursor = "no-drop";
 }

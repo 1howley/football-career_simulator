@@ -1,6 +1,7 @@
 :root {
     --back-color: #494949;
     --green: #59D13B;
+    --green-second: #9ff08a;
     --gray: #D9D9D9;
 }
 
@@ -8,24 +9,33 @@
     margin: 0;
     padding: 0;
     font-size: 18px;
-    font-family: JetBrains Mono;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-weight: bold
 }
 
 body {
     background-color: var(--back-color);
 }
-.gameView {
-    height: 95vh;
+
+.container {
+    height: 100vh;
     width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-
-/* team selected */
+.left-content, .mid-content, .right-content{
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 .teamSelected {
-    margin-top: 2rem;
-    margin-left: 8rem;
+    margin: 1rem;
     display: flex;
     flex-wrap: wrap;
     width: 25vw;
@@ -39,17 +49,69 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 2rem 1rem 2rem;
+    margin-right: 1rem;
 }
-.team {
+.team, .info {
     height: 2.5rem;
     width: 15rem;
     background-color: var(--gray);
     border-radius: 24px;
+    border: none;
+}
+.info {
+    color: #494949;
+    text-align: center;
+}
+.stayTeam {
+    height: 2.5rem;
+    width: 15rem;
+    background-color: var(--green);
+    border-radius: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    border: none;
+    margin-bottom: 1rem;
+}
+.plus {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    background-color: var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
 }
 
-/* team chooser */
+.stats{
+    margin: 1rem;
+}
 
-.teamChooser {
-    margin-left: 30vw;
+.team-chooser{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.infoStart {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+}
+.infoStart input {
+    outline: none;
+    margin: .8rem;
+}
+
+
+.stayTeam:hover, .plus:hover {
+    transition: .3s;
+    background-color: var(--green-second);
+}
+.stayTeam:active, .plus:active {
+    transition: .2s;
+    transform: scale(1.3);
 }
