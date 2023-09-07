@@ -52,11 +52,14 @@ body {
     margin-right: 1rem;
 }
 .team, .info {
+    display: flex;
     height: 2.5rem;
     width: 15rem;
     background-color: var(--gray);
     border-radius: 24px;
     border: none;
+    justify-content: center;
+    align-items: center;
 }
 .info {
     color: #494949;

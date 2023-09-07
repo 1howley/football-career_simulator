@@ -10,43 +10,43 @@
     
     <div class="container">
         <div class="left-content">
-            <div class="teamSelected" id="teamSelected">
-                <div class="ageCircle">18</div><div class="team"></div>
+            <div class="teamSelected" id="teamSelected1">
+                <div class="ageCircle">18</div><div class="team" id="team1"></div>
             </div>
-            <div class="teamSelected" id="teamSelected">
-                <div class="ageCircle">20</div><div class="team"></div>
+            <div class="teamSelected" id="teamSelected2">
+                <div class="ageCircle">20</div><div class="team" id="team2"></div>
             </div>
-            <div class="teamSelected" id="teamSelected">
-                <div class="ageCircle">22</div><div class="team"></div>
+            <div class="teamSelected" id="teamSelected3">
+                <div class="ageCircle">22</div><div class="team" id="team3"></div>
             </div>
-            <div class="teamSelected" id="teamSelected">
-                <div class="ageCircle">24</div><div class="team"></div>
+            <div class="teamSelected" id="teamSelected4">
+                <div class="ageCircle">24</div><div class="team" id="team4"></div>
             </div>
-            <div class="teamSelected" id="teamSelected">
-                <div class="ageCircle">26</div><div class="team"></div>
+            <div class="teamSelected" id="teamSelected5">
+                <div class="ageCircle">26</div><div class="team" id="team5"></div>
             </div>
-            <div class="teamSelected" id="teamSelected">
-                <div class="ageCircle">28</div><div class="team"></div>
+            <div class="teamSelected" id="teamSelected6">
+                <div class="ageCircle">28</div><div class="team" id="team6"></div>
             </div>
-            <div class="teamSelected" id="teamSelected">
+            <div class="teamSelected" id="teamSelected7">
                 <div class="ageCircle">30</div><div class="team"></div>
             </div>
-            <div class="teamSelected" id="teamSelected">
+            <div class="teamSelected" id="teamSelected8">
                 <div class="ageCircle">32</div><div class="team"></div>
             </div>
-            <div class="teamSelected" id="teamSelected">
+            <div class="teamSelected" id="teamSelected9">
                 <div class="ageCircle">34</div><div class="team"></div>
             </div>
-            <div class="teamSelected" id="teamSelected">
+            <div class="teamSelected" id="teamSelected10">
                 <div class="ageCircle">36</div><div class="team"></div>
             </div>
         </div>
         <div class="mid-content">
             <div class="stayTeam">CHOOSE YOUR TEAM</div>
             <div class="team-chooser">
-                <div class="team"></div><div class="plus">+</div>
-                <div class="team"></div><div class="plus">+</div>
-                <input type="button" value="STAY AT CURRENT TEAM" class="stayTeam"></input>
+                <div class="team" id="team-1"></div><div class="plus" onclick="setTeam('team-1')">+</div>
+                <div class="team" id="team-2"></div><div class="plus">+</div>
+                <input type="button" id="stay" value="STAY AT CURRENT TEAM" class="stayTeam" disabled="true"></input>
             </div>
             <div class="infoStart">
                 <input type="text" value="your nation" class="info" id="info" onclick="cleanInput()">

@@ -41,8 +41,10 @@ class FootballApi {
         const randomIndex = Math.floor(Math.random() * leagueData.length);
         const randomTeam = leagueData[randomIndex];
         console.log("Random Team:", randomTeam);
+        return randomTeam;
       } else {
         console.log("No league data available.");
+        return null;
       }
     }
 }
